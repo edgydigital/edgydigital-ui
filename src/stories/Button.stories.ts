@@ -21,3 +21,21 @@ export const Primary: Story = {
     children: "Primary",
   },
 };
+export const Secondary: Story = {
+  args: {
+    children: "Secondary",
+    variant: "secondary",
+  },
+};
+export const Disabled: Story = {
+  args: {
+    children: "Disabled",
+    isDisabled: true,
+  },
+};
+export const Loading: Story = {
+  args: {
+    children: "Loading",
+    isLoading: true,
+  },
+};
