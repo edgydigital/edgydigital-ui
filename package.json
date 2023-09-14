@@ -27,5 +27,8 @@
   "dependencies": {
     "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.6.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.gitlab.com/edgy.digital"
   }
 }
