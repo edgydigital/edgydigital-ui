@@ -64,11 +64,18 @@ export default {
         informationalWarning: "#C9A72D",
       },
       borderRadius: {
+        extraSmall: "2px",
         small: "4px",
         medium: "8px",
-        big: "16px",
-        large: "32px",
-        extraLarge: "64px",
+        large: "16px",
+        extraLarge: "32px",
+        full: "999px",
+      },
+      boxShadow: {
+        default1: "0px 40px 16px 0px rgba(0,0,0,0.1)",
+        default2: "0px 22px 13px 0px rgba(0,0,0,0.3)",
+        default3: "0px 10px 10px 0px rgba(0,0,0,0.4)",
+        default4: "0px 2px 5px 0px rgba(0,0,0,0.5)",
       },
       borderWidth: {
         0: "0",
