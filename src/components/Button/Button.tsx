@@ -2,8 +2,8 @@
 import React, {ReactNode} from 'react'
 import {cva, type VariantProps} from 'class-variance-authority'
 import {twMerge} from 'tailwind-merge'
-import ArrowLeftSVG from '../../assets/icons/arrowleft'
-import SpingSVG from '../../assets/icons/spin'
+import ArrowLeftSVG from '../../assets/icons/ArrowLeft'
+import SpingSVG from '../../assets/icons/Spin'
 import ArrowRightSVG from '../../assets/icons/ArrowRight'
 
 const buttonVariants = cva('uppercase gap-1 rounded-medium font-bold flex items-center px-4 rounded-medium', {
