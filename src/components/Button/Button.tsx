@@ -34,7 +34,6 @@ interface Props {
   children: ReactNode;
   LoadingIcon?: ReactNode;
   className?: string;
-  arrow?: "left" | "right" | null;
   isLoading?: boolean;
   isDisabled?: boolean;
   variant?: ButtonVariant["intent"];
@@ -44,7 +43,6 @@ interface Props {
 export default function Button({
   children,
   isLoading,
-  arrow,
   LoadingIcon,
   isDisabled,
   variant,
@@ -93,39 +91,7 @@ export default function Button({
         </>
       ) : (
         <>
-          {arrow === "left" && (
-            <div className="mr-1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="14"
-                viewBox="0 0 18 14"
-                fill="none"
-              >
-                <path
-                  d="M7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L0.292893 6.29289C-0.0976311 6.68342 -0.0976311 7.31658 0.292893 7.70711L6.29289 13.7071C6.68342 14.0976 7.31658 14.0976 7.70711 13.7071C8.09763 13.3166 8.09763 12.6834 7.70711 12.2929L3.41421 8H17C17.5523 8 18 7.55228 18 7C18 6.44772 17.5523 6 17 6H3.41421L7.70711 1.70711Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          )}
           {children}
-          {arrow === "right" && (
-            <div className="ml-1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="14"
-                viewBox="0 0 18 14"
-                fill="none"
-              >
-                <path
-                  d="M11.7071 0.292893C11.3166 -0.0976311 10.6834 -0.0976311 10.2929 0.292893C9.90237 0.683417 9.90237 1.31658 10.2929 1.70711L14.5858 6H1C0.447715 6 0 6.44772 0 7C0 7.55228 0.447715 8 1 8H14.5858L10.2929 12.2929C9.90237 12.6834 9.90237 13.3166 10.2929 13.7071C10.6834 14.0976 11.3166 14.0976 11.7071 13.7071L17.7071 7.70711C18.0976 7.31658 18.0976 6.68342 17.7071 6.29289L11.7071 0.292893Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          )}
         </>
       )}
     </button>
