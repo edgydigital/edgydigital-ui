@@ -2,9 +2,7 @@
 import React, {ReactNode} from 'react'
 import {cva, type VariantProps} from 'class-variance-authority'
 import {twMerge} from 'tailwind-merge'
-import ArrowLeftSVG from '../../assets/icons/ArrowLeft'
-import SpingSVG from '../../assets/icons/Spin'
-import ArrowRightSVG from '../../assets/icons/ArrowRight'
+import {ArrowLeft, ArrowRight} from 'react-feather'
 
 const buttonVariants = cva('uppercase gap-1 rounded-medium font-bold flex items-center px-4 rounded-medium', {
   variants: {
@@ -60,16 +58,17 @@ export default function Button({
       {isLoading ? (
         <>
           {LoadingIcon || (
-            <div className="animate-spin">
-              <SpingSVG />
-            </div>
+            <div
+              className="inline-block h-[30px] w-[30px] animate-spin rounded-full border-[3px] border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+              role="status"
+            />
           )}
         </>
       ) : (
         <>
-          {iconPosition === 'left' && <>{Icon || <ArrowLeftSVG />}</>}
+          {iconPosition === 'left' && <>{Icon || <ArrowLeft />}</>}
           {children}
-          {iconPosition === 'right' && <>{Icon || <ArrowRightSVG />}</>}
+          {iconPosition === 'right' && <>{Icon || <ArrowRight />}</>}
         </>
       )}
     </button>
