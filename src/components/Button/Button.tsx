@@ -4,7 +4,7 @@ import {cva, type VariantProps} from 'class-variance-authority'
 import {twMerge} from 'tailwind-merge'
 import {ArrowLeft, ArrowRight} from 'react-feather'
 
-const buttonVariants = cva('uppercase gap-1 rounded-medium font-bold flex items-center px-4 rounded-medium', {
+const buttonVariants = cva('uppercase w-fit gap-1 rounded-medium font-bold flex items-center px-4 rounded-medium', {
   variants: {
     intent: {
       primary: 'bg-black text-white',

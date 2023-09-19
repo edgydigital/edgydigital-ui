@@ -3,7 +3,7 @@ import React, {ReactNode} from 'react'
 import {Square, XCircle} from 'react-feather'
 import {twMerge} from 'tailwind-merge'
 
-const tagVariants = cva('px-2 py-1 h-[40px] rounded-full flex items-center', {
+const tagVariants = cva('px-2 py-1 h-[40px] w-fit rounded-full flex items-center', {
   variants: {
     intent: {
       primary: '',
