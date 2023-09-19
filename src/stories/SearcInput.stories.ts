@@ -9,7 +9,7 @@ const meta = {
   parameters: {
     layout: 'centered',
     controls: {
-      exclude: ['className', 'LoadingIcon', 'Icon', 'RemoveIcon', 'inputClassName', 'onChange']
+      exclude: ['className', 'LoadingIcon', 'Icon', 'RemoveIcon', 'inputClassName', 'onDelete', 'onChange']
     }
   }
 } satisfies Meta<typeof SearchInput>

@@ -24,7 +24,7 @@ export default function SearchInput({
 }: Props) {
   return (
     <div
-      className={`relative flex h-[50px] items-center gap-1 rounded-medium bg-transparent px-2 ${
+      className={`relative flex h-[50px]  items-center gap-1 rounded-medium bg-transparent px-2 ${
         value && 'shadow-default3'
       } ${className}`}
     >
@@ -33,7 +33,7 @@ export default function SearchInput({
         type="text"
         onChange={onChange}
         placeholder={placeholder}
-        className={`bg-transparent outline-none ${inputClassName}`}
+        className={`flex-1 bg-transparent outline-none ${inputClassName}`}
         value={value}
       />
       {value && <div onClick={onDelete}>{RemoveIcon || <XCircle />}</div>}
