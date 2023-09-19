@@ -1,6 +1,6 @@
 {
   "name": "@edgydigital/edgydigital-ui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Edgy.digital component library",
   "scripts": {
     "rollup": "rollup -c",
