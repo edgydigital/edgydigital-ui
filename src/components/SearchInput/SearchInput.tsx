@@ -24,7 +24,7 @@ export default function SearchInput({
 }: Props) {
   return (
     <div
-      className={`relative flex h-[50px]  items-center gap-1 rounded-medium bg-transparent px-3 ${
+      className={`relative flex h-[50px]  items-center gap-1 rounded-small bg-transparent px-3 ${
         value && 'shadow-default3'
       } ${className}`}
     >
