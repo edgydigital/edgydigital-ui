@@ -4,42 +4,42 @@
 
 h1,
 .h1 {
-  @apply font-bold laptop:text-[64px] laptop:leading-[72px];
+  @apply text-[48px] font-bold leading-[56px] laptop:text-[64px] laptop:leading-[72px];
 }
 h2,
 .h2 {
-  @apply font-bold laptop:text-[48px] laptop:leading-[56px];
+  @apply text-[40px] font-bold leading-[48px] laptop:text-[48px] laptop:leading-[56px];
 }
 h3,
 .h3 {
-  @apply font-bold laptop:text-[32px] laptop:leading-[48px];
+  @apply text-[32px] font-bold leading-[40px] laptop:text-[32px] laptop:leading-[48px];
 }
 h4,
 .h4 {
-  @apply font-bold laptop:text-[24px] laptop:leading-[32px];
+  @apply text-[24px] font-bold leading-[32px] laptop:text-[24px] laptop:leading-[32px];
 }
 .subtitle {
-  @apply font-semibold laptop:text-[18px] laptop:leading-[24px];
+  @apply text-[14px] font-semibold leading-[24px] laptop:text-[18px] laptop:leading-[24px];
 }
 .semiSubtitle {
-  @apply font-semibold laptop:text-[16px] laptop:leading-[24px];
+  @apply text-[12px] font-semibold leading-[22px] laptop:text-[16px] laptop:leading-[24px];
 }
 .paragraphRegular,
 p {
-  @apply font-medium laptop:text-[14px] laptop:leading-[24px];
+  @apply text-[14px] font-medium leading-[24px] laptop:text-[14px] laptop:leading-[24px];
 }
 .paragraphSmall {
-  @apply font-medium laptop:text-[12px] laptop:leading-[18px];
+  @apply text-[12px] font-medium leading-[24px]  laptop:text-[12px] laptop:leading-[18px];
 }
 .button {
-  @apply font-bold laptop:text-[12px] laptop:leading-[22px];
+  @apply text-[12px] font-bold leading-[22px] laptop:text-[12px] laptop:leading-[22px];
 }
 .label {
-  @apply font-bold laptop:text-[10px] laptop:leading-[10px];
+  @apply text-[10px] font-bold leading-[10px] laptop:text-[10px] laptop:leading-[10px];
 }
 .navigation {
-  @apply font-semibold laptop:text-[14px] laptop:leading-[20px];
+  @apply text-[12px] font-semibold leading-[14px] laptop:text-[14px] laptop:leading-[20px];
 }
 .link {
-  @apply font-bold underline laptop:text-[12px] laptop:leading-[12px];
+  @apply text-[12px] font-bold leading-[12px] underline laptop:text-[12px] laptop:leading-[12px];
 }
