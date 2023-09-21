@@ -5,7 +5,7 @@ import {twMerge} from 'tailwind-merge'
 import {ArrowLeft, ArrowRight} from 'react-feather'
 
 const buttonVariants = cva(
-  'uppercase button w-fit gap-1 rounded-medium font-bold flex items-center px-5 rounded-medium',
+  'uppercase button w-fit gap-1 rounded-medium font-bold flex items-center px-5 rounded-small',
   {
     variants: {
       intent: {
