@@ -24,19 +24,24 @@ export default function SearchInput({
 }: Props) {
   return (
     <div
-      className={`relative flex h-[50px]  items-center gap-1 rounded-medium bg-transparent px-2 ${
+      className={`relative flex h-[50px]  items-center gap-1 rounded-medium bg-transparent px-3 ${
         value && 'shadow-default3'
       } ${className}`}
     >
-      <div>{Icon || <Search />}</div>
       <input
         type="text"
         onChange={onChange}
         placeholder={placeholder}
-        className={`flex-1 bg-transparent outline-none ${inputClassName}`}
+        className={`paragraphRegular flex-1 bg-transparent outline-none ${inputClassName}`}
         value={value}
       />
-      {value && <div onClick={onDelete}>{RemoveIcon || <XCircle />}</div>}
+      {value ? (
+        <div className="cursor-pointer" onClick={onDelete}>
+          {RemoveIcon || <XCircle />}
+        </div>
+      ) : (
+        <div>{Icon || <Search />}</div>
+      )}
     </div>
   )
 }

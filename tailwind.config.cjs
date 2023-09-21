@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{html,js,ts,jsx,tsx}', './storybook/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
     spacing: {
       0: '0',
@@ -65,16 +65,18 @@ export default {
       },
       borderRadius: {
         extraSmall: '2px',
-        small: '4px',
-        medium: '8px',
-        large: '16px',
-        extraLarge: '32px',
+        semiSmall: '4px',
+        small: '8px',
+        medium: '16px',
+        semiLarge: '32px',
+        large: '64px',
+        extraLarge: '128px',
         full: '999px'
       },
       boxShadow: {
         default1: '0px 40px 16px 0px rgba(0,0,0,0.01)',
         default2: '0px 22px 13px 0px rgba(0,0,0,0.03)',
-        default3: '0px 10px 10px 0px rgba(0,0,0,0.04)',
+        default3: '0px 10px 10px 0px rgba(0,0,0,0.09)',
         default4: '0px 2px 5px 0px rgba(0,0,0,0.05)'
       },
       borderWidth: {
@@ -83,6 +85,5 @@ export default {
         2: '2px'
       }
     }
-  },
-  plugins: []
+  }
 }

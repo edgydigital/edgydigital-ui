@@ -1,6 +1,7 @@
+import React, {useState} from 'react'
 import type {Meta, StoryObj} from '@storybook/react'
-
 import SearchInput from '../components/SearchInput/SearchInput'
+import {X} from 'react-feather'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -29,4 +30,27 @@ export const Filled: Story = {
     placeholder: 'Search',
     value: 'Value'
   }
+}
+
+export const Playground = (args: Story) => {
+  const [searchValue, setSearchValue] = useState('')
+  const searchValueHandler = (text: string) => {
+    setSearchValue(text)
+  }
+  const deleteHandler = () => {
+    setSearchValue('')
+  }
+  return (
+    <div>
+      <SearchInput
+        placeholder="Placeholder"
+        RemoveIcon={<X />}
+        value={searchValue}
+        onDelete={deleteHandler}
+        onChange={(e) => {
+          searchValueHandler(e.target.value)
+        }}
+      />
+    </div>
+  )
 }

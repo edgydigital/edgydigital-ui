@@ -13,7 +13,7 @@ export default function CheckBox({checked, hasIcon, className, Icon, onClick}: P
   return (
     <div
       onClick={onClick}
-      className={`flex h-[24px] w-[24px] items-center justify-center rounded-small text-white ${
+      className={`flex h-[24px] w-[24px] cursor-pointer items-center justify-center rounded-small text-white ${
         checked ? 'bg-black' : 'border-1 border-gray50'
       } ${className}`}
     >

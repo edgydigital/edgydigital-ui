@@ -1,5 +1,5 @@
+import React, {useState} from 'react'
 import type {Meta, StoryObj} from '@storybook/react'
-
 import Button from '../components/Button/Button'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -41,4 +41,23 @@ export const Loading: Story = {
     children: 'Loading',
     isLoading: true
   }
+}
+
+export const Playground = (args: Story) => {
+  const [clicked, setClicked] = useState(false)
+
+  const clickHandler = () => {
+    setClicked(true)
+    setTimeout(() => {
+      setClicked(false)
+    }, 1000)
+  }
+  return (
+    <div className="flex flex-col items-center">
+      <Button className="mb-2" onClick={clickHandler} {...args}>
+        Test
+      </Button>
+      {clicked && <p>Button was clicked</p>}
+    </div>
+  )
 }

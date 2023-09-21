@@ -1,5 +1,7 @@
+import React from 'react'
 import type {Meta, StoryObj} from '@storybook/react'
 import Link from '../components/Link/Link'
+import {ArrowRightCircle} from 'react-feather'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -34,4 +36,19 @@ export const IconRight: Story = {
     label: 'View all',
     iconPosition: 'right'
   }
+}
+
+export const Playground = (args: Story) => {
+  return (
+    <div>
+      <a href="https://edgy.digital" target="_blank">
+        <Link
+          iconPosition="right"
+          Icon={<ArrowRightCircle color="#CC354B" />}
+          className="underline"
+          label="edgy.digital"
+        />
+      </a>
+    </div>
+  )
 }

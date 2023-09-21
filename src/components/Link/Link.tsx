@@ -10,9 +10,9 @@ interface Props {
 
 export default function Link({label, className, iconPosition, Icon}: Props) {
   return (
-    <div className={`flex w-fit cursor-pointer gap-1 ${className}`}>
+    <div className={`flex w-fit cursor-pointer items-center gap-1 ${className}`}>
       {iconPosition === 'left' && <>{Icon || <ArrowLeft />}</>}
-      <p>{label}</p>
+      <p className="link">{label}</p>
       {iconPosition === 'right' && <>{Icon || <ArrowRight />}</>}
     </div>
   )

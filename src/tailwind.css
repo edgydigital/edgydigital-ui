@@ -1,39 +1,45 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@layer base {
-  .h1 {
-    @apply text-[21px] leading-[31px] font-bold laptop:text-[48px] laptop:leading-[58px];
-  }
-  .h2 {
-    @apply text-[16px] leading-[26px] font-bold laptop:text-[16px] laptop:leading-[26px];
-  }
-  .h3 {
-    @apply text-[14px] leading-[24px] font-bold laptop:text-[14px] laptop:leading-[24px];
-  }
-  .subtitle {
-    @apply text-[14px] leading-[24px] font-semibold laptop:text-[14px] laptop:leading-[24px];
-  }
-  .semiSubtitle {
-    @apply text-[12px] leading-[22px] font-semibold laptop:text-[12px] laptop:leading-[22px];
-  }
-  .paragraph-regular {
-    @apply text-[13px] leading-[23px] font-medium;
-  }
-  .paragraph-small {
-    @apply text-[11px] leading-[21px] font-medium;
-  }
-  .button {
-    @apply text-[12px] leading-[22px] font-bold uppercase;
-  }
-  .label {
-    @apply text-[10px] leading-[10px] font-bold;
-  }
-  .navigation {
-    @apply text-[10px] leading-[10px] font-semibold;
-  }
-  .link {
-    @apply text-[12px] leading-[12px] font-bold uppercase;
-  }
+h1,
+.h1 {
+  @apply font-bold laptop:text-[64px] laptop:leading-[72px];
+}
+h2,
+.h2 {
+  @apply font-bold laptop:text-[48px] laptop:leading-[56px];
+}
+h3,
+.h3 {
+  @apply font-bold laptop:text-[32px] laptop:leading-[48px];
+}
+h4,
+.h4 {
+  @apply font-bold laptop:text-[24px] laptop:leading-[32px];
+}
+.subtitle {
+  @apply font-semibold laptop:text-[18px] laptop:leading-[24px];
+}
+.semiSubtitle {
+  @apply font-semibold laptop:text-[16px] laptop:leading-[24px];
+}
+.paragraphRegular,
+p {
+  @apply font-medium laptop:text-[14px] laptop:leading-[24px];
+}
+.paragraphSmall {
+  @apply font-medium laptop:text-[12px] laptop:leading-[18px];
+}
+.button {
+  @apply font-bold laptop:text-[12px] laptop:leading-[22px];
+}
+.label {
+  @apply font-bold laptop:text-[10px] laptop:leading-[10px];
+}
+.navigation {
+  @apply font-semibold laptop:text-[14px] laptop:leading-[20px];
+}
+.link {
+  @apply font-bold underline laptop:text-[12px] laptop:leading-[12px];
 }

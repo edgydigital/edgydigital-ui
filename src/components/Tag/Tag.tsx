@@ -6,8 +6,8 @@ import {twMerge} from 'tailwind-merge'
 const tagVariants = cva('px-2 py-1 h-[40px] w-fit rounded-full flex items-center', {
   variants: {
     intent: {
-      primary: '',
-      outline: 'border-1 border-gray50 text-gray50'
+      primary: 'shadow-default3',
+      outline: 'border-1 border-black'
     }
   }
 })
