@@ -1,3 +1,4 @@
+import React from 'react'
 import type {Meta, StoryObj} from '@storybook/react'
 import Button from '../components/Button/Button'
 import ControlItem from '../components/ControlItem/ControlItem'
@@ -5,7 +6,7 @@ import ControlItem from '../components/ControlItem/ControlItem'
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   title: 'Components/Atoms/Control/ControlItem',
-  component: ControlItem,
+
   parameters: {
     layout: 'centered',
     controls: {
@@ -18,43 +19,46 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const SegmentedDefault: Story = {
-  args: {
-    label: 'Option A',
-    variant: 'segmented'
-  }
+export const SegmentedDefault = (args: Story) => {
+  return (
+    <div>
+      <ControlItem label="Option A" variant="segmented" />
+    </div>
+  )
 }
-export const SegmentedActive: Story = {
-  args: {
-    label: 'Option A',
-    variant: 'segmented',
-    active: true
-  }
+export const SegmentedActive = (args: Story) => {
+  return (
+    <div>
+      <ControlItem label="Option A" active variant="segmented" />
+    </div>
+  )
 }
-export const SegmentedDisabled: Story = {
-  args: {
-    label: 'Option A',
-    variant: 'segmented',
-    disabled: true
-  }
+export const SegmentedDisabled = (args: Story) => {
+  return (
+    <div>
+      <ControlItem label="Option A" disabled variant="segmented" />
+    </div>
+  )
 }
-export const TabDefault: Story = {
-  args: {
-    label: 'Option A',
-    variant: 'tab'
-  }
+
+export const TabDefault = (args: Story) => {
+  return (
+    <div>
+      <ControlItem label="Option A" variant="tab" />
+    </div>
+  )
 }
-export const TabActive: Story = {
-  args: {
-    label: 'Option A',
-    variant: 'tab',
-    active: true
-  }
+export const TabActive = (args: Story) => {
+  return (
+    <div>
+      <ControlItem label="Option A" active variant="tab" />
+    </div>
+  )
 }
-export const TabDisabled: Story = {
-  args: {
-    label: 'Option A',
-    variant: 'tab',
-    disabled: true
-  }
+export const TabDisabled = (args: Story) => {
+  return (
+    <div>
+      <ControlItem label="Option A" disabled variant="tab" />
+    </div>
+  )
 }

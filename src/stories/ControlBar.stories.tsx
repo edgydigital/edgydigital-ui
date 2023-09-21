@@ -6,7 +6,6 @@ import ControlBar from '../components/ControlBar/ControlBar'
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   title: 'Components/Atoms/Control/ControlBar',
-  component: ControlBar,
   parameters: {
     layout: 'centered',
     controls: {
@@ -36,6 +35,7 @@ export const PlaygroundSegmentedTwo = (args: Story) => {
           {label: 'Option B', value: 'B'}
         ]}
       />
+      <p className="h3 mt-3">{`Selected option is: ${activeID}`}</p>
     </div>
   )
 }

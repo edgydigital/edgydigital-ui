@@ -22,13 +22,13 @@ interface Props {
   variant?: ControlVariant['intent']
   active?: boolean
   disabled?: boolean
-  onClick: (text: string) => void
+  onClick?: (text: string) => void
 }
 export default function ControlItem({className, textClassName, label, variant, active, disabled, onClick}: Props) {
   return (
     <div
       onClick={() => {
-        if (!disabled) {
+        if (!disabled && onClick) {
           onClick(label)
         }
       }}
