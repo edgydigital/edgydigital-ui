@@ -77,7 +77,8 @@ export default {
         default1: '0px 40px 16px 0px rgba(0,0,0,0.01)',
         default2: '0px 22px 13px 0px rgba(0,0,0,0.03)',
         default3: '0px 10px 10px 0px rgba(0,0,0,0.09)',
-        default4: '0px 2px 5px 0px rgba(0,0,0,0.05)'
+        default4: '0px 2px 5px 0px rgba(0,0,0,0.05)',
+        checkBox: '0px 0px 0px 4px #E9E9E9'
       },
       borderWidth: {
         0: '0',

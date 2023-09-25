@@ -12,17 +12,21 @@ h2,
 }
 h3,
 .h3 {
-  @apply text-[32px] font-bold leading-[40px] laptop:text-[32px] laptop:leading-[48px];
+  @apply text-[32px] font-bold leading-[32px] laptop:text-[32px] laptop:leading-[48px];
 }
 h4,
 .h4 {
   @apply text-[24px] font-bold leading-[32px] laptop:text-[24px] laptop:leading-[32px];
 }
+h5,
+.h5 {
+  @apply text-[16px] font-bold leading-[24px] laptop:text-[20px] laptop:leading-[24px];
+}
 .subtitle {
   @apply text-[14px] font-semibold leading-[24px] laptop:text-[18px] laptop:leading-[24px];
 }
 .semiSubtitle {
-  @apply text-[12px] font-semibold leading-[22px] laptop:text-[16px] laptop:leading-[24px];
+  @apply text-[12px] font-medium leading-[22px] laptop:text-[16px] laptop:leading-[24px];
 }
 .paragraphRegular,
 p {

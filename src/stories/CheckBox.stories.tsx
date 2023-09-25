@@ -29,14 +29,22 @@ export const Default: Story = {
 
 export const Checked: Story = {
   args: {
-    checked: true
-  }
-}
-
-export const CheckedWithIcon: Story = {
-  args: {
     checked: true,
     hasIcon: true
+  }
+}
+export const DisabledUnchecked: Story = {
+  args: {
+    checked: false,
+    hasIcon: false,
+    disabled: true
+  }
+}
+export const DisabledChecked: Story = {
+  args: {
+    checked: true,
+    hasIcon: true,
+    disabled: true
   }
 }
 
@@ -46,7 +54,7 @@ export const Playground = (args: Story) => {
     setChecked(!checked)
   }
   return (
-    <div className="flex gap-2">
+    <div className="flex max-w-[230px] items-center gap-2">
       <CheckBox Icon={<X width={14} height={14} />} hasIcon checked={checked} onClick={checkHandler} />
       <p>{checked ? 'Checked' : 'Unchecked'}</p>
     </div>
