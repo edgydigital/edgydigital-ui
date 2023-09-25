@@ -12,7 +12,7 @@ h2,
 }
 h3,
 .h3 {
-  @apply text-[32px] font-bold leading-[32px] laptop:text-[32px] laptop:leading-[48px];
+  @apply text-[32px] font-bold leading-[32px] laptop:text-[32px] laptop:leading-[40px];
 }
 h4,
 .h4 {
