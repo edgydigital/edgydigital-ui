@@ -3,7 +3,7 @@ import {VariantProps, cva} from 'class-variance-authority'
 import {twMerge} from 'tailwind-merge'
 
 const controlVariants = cva(
-  ' h-[38px] w-[110px] laptop:h-[52px] laptop:w-[141px] cursor-pointer flex items-center justify-center',
+  ' h-[38px] w-[110px] laptop:h-[56px] laptop:w-[141px] cursor-pointer flex items-center justify-center',
   {
     variants: {intent: {segmented: '', tab: ''}},
     defaultVariants: {intent: 'segmented'}
