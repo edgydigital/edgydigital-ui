@@ -20,9 +20,18 @@ export default function ControlBar({
   options,
   onClick
 }: Props) {
+  const roundedClass = (index: number, arrayLength: number) => {
+    if (index === 0) {
+      return 'rounded-l-small'
+    }
+    if (index === arrayLength - 1) {
+      return 'rounded-r-small'
+    }
+    return ''
+  }
   return (
     <div className={`flex items-center justify-center ${className}`}>
-      {options.map((object, index) => {
+      {options.map((object, index, array) => {
         return (
           <ControlItem
             onClick={() => {
@@ -32,7 +41,7 @@ export default function ControlBar({
             variant={variant}
             active={activeID === object.value}
             key={index}
-            className={itemClassName}
+            className={`${roundedClass(index, array.length)} ${itemClassName}`}
             textClassName={itemTextClassName}
             label={object.label}
           />
