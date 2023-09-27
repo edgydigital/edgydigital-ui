@@ -28,7 +28,7 @@ export const PlaygroundSegmentedTwo = (args: Story) => {
         onClick={(activeID) => {
           setActiveID(activeID)
         }}
-        className="overflow-hidden rounded-small"
+        className="rounded-small"
         variant="segmented"
         options={[
           {label: 'Option A', value: 'A'},
@@ -48,7 +48,7 @@ export const PlaygroundSegmentedThree = (args: Story) => {
         onClick={(activeID) => {
           setActiveID(activeID)
         }}
-        className="overflow-hidden rounded-small"
+        className="rounded-small"
         variant="segmented"
         options={[
           {label: 'Option A', value: 'A'},
