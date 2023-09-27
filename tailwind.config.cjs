@@ -84,7 +84,11 @@ export default {
         0: '0',
         1: '1px',
         2: '2px'
-      }
+      },
+      transitionProperty: {
+        'max-height': 'max-height',
+        bg: 'background-color'
+      },
     }
   }
 }
