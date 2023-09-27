@@ -1,13 +1,14 @@
 import type {Preview} from '@storybook/react'
 // import 'tailwindcss/tailwind.css'
 import '../src/tailwind.css'
+import {INITIAL_VIEWPORTS} from '@storybook/addon-viewport'
 
 const preview: Preview = {
   parameters: {
     actions: {argTypesRegex: '^on[A-Z].*'},
     viewport: {
-      defaultViewport: 'Default',
       viewports: {
+        ...INITIAL_VIEWPORTS,
         small: {
           name: 'Small',
           styles: {
