@@ -13,6 +13,7 @@ interface Props {
   progress: number
   showPercentage?: boolean
   percentageFormat?: 'int' | 'singleDecimal' | 'doubleDecimal'
+  direction?: 'clockwise' | 'anticlockwise'
 }
 
 export default function ProgressCircle({
@@ -21,7 +22,8 @@ export default function ProgressCircle({
   Icon,
   progress = 0,
   showPercentage,
-  percentageFormat = 'int'
+  percentageFormat = 'int',
+  direction = 'anticlockwise'
 }: Props) {
   const prettyProgress = () => {
     if (progress < 0) {
@@ -42,7 +44,11 @@ export default function ProgressCircle({
 
   return (
     <div className={`relative h-fit w-fit ${className}`}>
-      <svg width={styleClass[size]?.w} height={styleClass[size]?.h}>
+      <svg
+        width={styleClass[size]?.w}
+        height={styleClass[size]?.h}
+        style={direction === 'anticlockwise' ? {transform: 'rotateY(180deg)'} : {}}
+      >
         <g transform={`rotate(-90 ${styleClass[size]?.w / 2} ${styleClass[size]?.w / 2})`}>
           <Circle color="#161616" percentage={+prettyProgress()} styleVars={styleClass[size]} />
         </g>
