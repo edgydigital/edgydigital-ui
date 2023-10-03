@@ -16,9 +16,9 @@ export default function RadioButton({label, value, name, checked, disabled, clas
 
   return (
     <label
-      className={`paragraphRegular group relative flex cursor-pointer select-none items-center pl-[35px] ${
-        disabled ? ' !cursor-not-allowed' : ''
-      }`}
+      className={`paragraphRegular group relative flex cursor-pointer select-none items-center ${
+        size === 'md' ? 'pl-[28px]' : 'pl-[24px]'
+      } text-secondaryText ${disabled ? ' !cursor-not-allowed' : ''}`}
     >
       {label}
       <input

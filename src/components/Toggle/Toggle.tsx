@@ -40,7 +40,7 @@ export default function Toggle({
           } aspect-square h-[100%] rounded-full bg-white transition-all duration-[300ms] ${ringClassName}`}
         ></div>
       </div>
-      {label && <p className={`${textClassName}`}>{label}</p>}
+      {label && <p className={`text-secondaryText ${textClassName}`}>{label}</p>}
     </div>
   )
 }
