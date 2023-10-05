@@ -8,6 +8,7 @@ interface Props {
   bottomLabel?: boolean
   progress: number
   indicatorClass?: string
+  barClassName?: string
 }
 
 export default function ProgressBar({
@@ -17,6 +18,7 @@ export default function ProgressBar({
   rightLabel,
   topLabel,
   bottomLabel,
+  barClassName,
   indicatorClass = ''
 }: Props) {
   const prettyProgress = () => {
@@ -35,7 +37,7 @@ export default function ProgressBar({
           <p>{prettyProgress()}%</p>
         </div>
       ) : null}
-      <div className="flex w-full items-center">
+      <div className={`flex w-full items-center rounded-full ${barClassName}`}>
         <div
           className={`relative mr-auto h-[8px] rounded-full bg-black ${indicatorClass}`}
           style={{width: `${prettyProgress()}%`}}

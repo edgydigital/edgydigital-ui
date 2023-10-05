@@ -31,3 +31,11 @@ export const Default = (props: Story) => {
     </div>
   )
 }
+
+export const BarBackground = (props: Story) => {
+  return (
+    <div className="h-[200px] w-[400px] bg-[#f3f3f3] p-8">
+      <ProgressBar barClassName="bg-white" progress={props.args?.progress ?? 20} {...props} />
+    </div>
+  )
+}
