@@ -1,16 +1,21 @@
-import React, {HTMLAttributes} from 'react'
+import React, {HTMLAttributes, ReactNode} from 'react'
 import FileInputGraphics from '../../Icons/FileInputGraphics'
 
-interface Props extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+interface Props
+  extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'title'> {
   className?: string
-  title?: string
-  description?: string
+  title?: string | ReactNode
+  description?: string | ReactNode
   containerProps?: HTMLAttributes<HTMLDivElement>
 }
 
 export default function FileInput({
   className = '',
-  title = 'Drop your files here or browse',
+  title = (
+    <p className="semiSubtitle">
+      Drop your files here or <span className="underline">browse</span>
+    </p>
+  ),
   description = 'Maximum size: 50MB',
   style,
   containerProps,
@@ -30,8 +35,10 @@ export default function FileInput({
         className={`absolute inset-0 rounded-medium ${className}`}
       />
       <FileInputGraphics />
-      <p className="semiSubtitle mt-2">{title}</p>
-      <p className="paragraphSmall mt-x text-gray50">{description}</p>
+      <div className="mt-2">{typeof title === 'string' ? <p className="semiSubtitle">{title}</p> : title}</div>
+      <div className="mt-x">
+        {typeof description === 'string' ? <p className="paragraphSmall text-gray50">{description}</p> : description}
+      </div>
     </div>
   )
 }
