@@ -36,10 +36,10 @@ export const Default: Story = {
     description: 'Description',
     Icon: <Globe />,
     buttons: [
-      <button className="underline" key="1" onClick={() => alert('I am button')}>
+      <button className="text-[12px] underline" key="1" onClick={() => alert('I am button')}>
         Click me
       </button>,
-      <button className="underline" key="2" onClick={() => alert('I am button')}>
+      <button className="text-[12px] underline" key="2" onClick={() => alert('I am button')}>
         Click me 2
       </button>
     ]
