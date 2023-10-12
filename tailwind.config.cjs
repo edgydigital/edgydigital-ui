@@ -45,7 +45,7 @@ export default {
         darkPrimaryAccent: '#CC354B',
         darkPrimaryText: '#F0F0F0',
         darkSecondaryText: '#A5A5A5',
-        darkButtton: '#363636',
+        darkButton: '#363636',
         darkSystemInterface: '#FFFFFF',
         darkModalInterface: '#00000050',
         gray100: '#FFFFFF',
