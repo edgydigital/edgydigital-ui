@@ -59,9 +59,9 @@ export default {
         gray28: '#474747',
         gray15: '#262626',
         gray0: '#000000',
-        success: '#499771',
-        error: '#A72323',
-        warning: '#C9A72D'
+        success: '#00BB8E',
+        error: '#FF3C5F',
+        warning: '#FF8D3A'
       },
       borderRadius: {
         extraSmall: '2px',

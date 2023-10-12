@@ -21,7 +21,7 @@ export type InputVariants = VariantProps<typeof inputVariants>
 export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
   boxClassName?: string
   className?: string
-  variant?: InputVariants[`intent`]
+  variant?: InputVariants['intent']
   isValid?: boolean
   errorText?: string
   Icon?: ReactNode
@@ -50,6 +50,8 @@ export default function Input({
         return <XCircle size={24} className="stroke-error" />
       case 'valid':
         return <Check size={24} className="stroke-success" />
+      default:
+        return null
     }
   }, [variant])
   return (
@@ -66,7 +68,7 @@ export default function Input({
         />
         {Icon || renderIcon}
       </div>
-      {variant === 'error' && errorText ? <p className="paragraphSmall text-error mt-x">{errorText}</p> : null}
+      {variant === 'error' && errorText ? <p className="paragraphSmall mt-x text-error">{errorText}</p> : null}
     </div>
   )
 }
