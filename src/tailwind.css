@@ -51,8 +51,6 @@ p {
   @apply text-[12px] font-bold leading-[12px];
 }
 
-.grayIcon {
-  > svg {
-    @apply stroke-primaryText opacity-[0.3];
-  }
+.grayIcon > svg {
+  @apply stroke-primaryText opacity-[0.3];
 }
