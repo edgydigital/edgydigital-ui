@@ -47,3 +47,6 @@ p {
 .link {
   @apply text-[12px] font-bold leading-[12px] underline laptop:text-[12px] laptop:leading-[12px];
 }
+.formLabel {
+  @apply text-[12px] font-bold leading-[12px];
+}

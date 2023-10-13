@@ -45,7 +45,7 @@ export default {
         darkPrimaryAccent: '#CC354B',
         darkPrimaryText: '#F0F0F0',
         darkSecondaryText: '#A5A5A5',
-        darkButtton: '#363636',
+        darkButton: '#363636',
         darkSystemInterface: '#FFFFFF',
         darkModalInterface: '#00000050',
         gray100: '#FFFFFF',
@@ -59,9 +59,9 @@ export default {
         gray28: '#474747',
         gray15: '#262626',
         gray0: '#000000',
-        informationalSuccess: '#499771',
-        informationalError: '#A72323',
-        informationalWarning: '#C9A72D'
+        success: '#00BB8E',
+        error: '#FF3C5F',
+        warning: '#FF8D3A'
       },
       borderRadius: {
         extraSmall: '2px',
