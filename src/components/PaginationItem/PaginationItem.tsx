@@ -25,7 +25,7 @@ const buttonStyle = (variant: PaginationItemVariant['intent'], className: string
 interface Props {
   className?: string
   onClick?: () => void
-  index?: number
+  index?: number | string
   isActive?: boolean
   variant?: PaginationItemVariant['intent']
   textClassName?: string
