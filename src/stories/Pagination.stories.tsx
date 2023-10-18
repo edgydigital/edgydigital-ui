@@ -33,7 +33,7 @@ export const PlaygroundCircle = () => {
   const onPageClick = (index: number) => {
     setPage(index)
   }
-  const something = (page: number) => {
+  const renderPreviosPagesFunction = (page: number) => {
     if (page > 1 && page < 3) {
       return page - 1
     } else if (page >= 3) {
@@ -55,7 +55,7 @@ export const PlaygroundCircle = () => {
         numberOfPages={4}
         maxPage={7}
         currentPage={page}
-        startsFrom={something(page)}
+        startsFrom={renderPreviosPagesFunction(page)}
         leftText="Previous"
         rightText="Next"
       />
@@ -76,7 +76,7 @@ export const PlaygroundSquare = () => {
   const onPageClick = (index: number) => {
     setPage(index)
   }
-  const something = (page: number) => {
+  const renderPreviosPagesFunction = (page: number) => {
     if (page > 1 && page < 3) {
       return page - 1
     } else if (page >= 3) {
@@ -98,7 +98,7 @@ export const PlaygroundSquare = () => {
         numberOfPages={4}
         maxPage={7}
         currentPage={page}
-        startsFrom={something(page)}
+        startsFrom={renderPreviosPagesFunction(page)}
         leftText="Previous"
         rightText="Next"
       />
