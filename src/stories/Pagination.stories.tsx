@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import type {Meta, StoryObj} from '@storybook/react'
 import Pagination from '../components/Pagination/Pagination'
+import {ChevronLeft, ChevronRight} from 'react-feather'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -32,10 +33,21 @@ export const PlaygroundCircle = () => {
   const onPageClick = (index: number) => {
     setPage(index)
   }
+  const something = (page: number) => {
+    if (page > 1 && page < 3) {
+      return page - 1
+    } else if (page >= 3) {
+      return page - 2
+    } else {
+      return page
+    }
+  }
   return (
     <div>
       <h1 className="mb-4 text-center">Page {page}</h1>
       <Pagination
+        leftIcon={<ChevronLeft />}
+        rightIcon={<ChevronRight />}
         variant="circle"
         increasePageFunction={increasePage}
         decreasePageFunction={decreasePage}
@@ -43,7 +55,7 @@ export const PlaygroundCircle = () => {
         numberOfPages={4}
         maxPage={7}
         currentPage={page}
-        startsFrom={page > 3 ? page - 1 : page}
+        startsFrom={something(page)}
         leftText="Previous"
         rightText="Next"
       />
@@ -64,10 +76,21 @@ export const PlaygroundSquare = () => {
   const onPageClick = (index: number) => {
     setPage(index)
   }
+  const something = (page: number) => {
+    if (page > 1 && page < 3) {
+      return page - 1
+    } else if (page >= 3) {
+      return page - 2
+    } else {
+      return page
+    }
+  }
   return (
     <div>
       <h1 className="mb-4 text-center">Page {page}</h1>
       <Pagination
+        leftIcon={<ChevronLeft />}
+        rightIcon={<ChevronRight />}
         variant="square"
         increasePageFunction={increasePage}
         decreasePageFunction={decreasePage}
@@ -75,7 +98,7 @@ export const PlaygroundSquare = () => {
         numberOfPages={4}
         maxPage={7}
         currentPage={page}
-        startsFrom={page > 3 ? page - 1 : page}
+        startsFrom={something(page)}
         leftText="Previous"
         rightText="Next"
       />

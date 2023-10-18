@@ -57,7 +57,7 @@ export default function Pagination({
 
   return (
     <div className={`flex items-center gap-2 ${classNames?.container}`}>
-      {createArrayWithLength(numberOfPages)[0] === 1 ? null : (
+      {currentPage === 1 ? null : (
         <>
           <div onClick={decreasePageFunction} className="flex cursor-pointer gap-2">
             <p className={`${classNames?.leftText}`}>{leftText}</p>
@@ -75,11 +75,13 @@ export default function Pagination({
               }}
               index={1}
             />
-            <PaginationItem
-              variant={variant}
-              className="cursor-default hover:border-gray50  hover:text-gray50"
-              index="..."
-            />
+            {currentPage === 4 ? null : (
+              <PaginationItem
+                variant={variant}
+                className="cursor-default hover:border-gray50  hover:text-gray50"
+                index="..."
+              />
+            )}
           </>
         )}
         {createArrayWithLength(numberOfPages).map((object, index) => {
@@ -103,12 +105,20 @@ export default function Pagination({
         })}
         {maxPage && maxPage > numberOfPages + startsFrom - 1 ? (
           <>
+            {currentPage === maxPage - 2 ? null : (
+              <PaginationItem
+                variant={variant}
+                className="cursor-default hover:border-gray50  hover:text-gray50"
+                index="..."
+              />
+            )}
             <PaginationItem
+              onClick={() => {
+                onPageClick(maxPage)
+              }}
+              index={maxPage}
               variant={variant}
-              className="cursor-default hover:border-gray50  hover:text-gray50"
-              index="..."
             />
-            <PaginationItem index={maxPage} variant={variant} />
           </>
         ) : null}
       </div>
