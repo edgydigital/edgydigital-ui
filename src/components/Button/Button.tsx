@@ -1,4 +1,3 @@
-'use client'
 import React, {ReactNode} from 'react'
 import {cva, type VariantProps} from 'class-variance-authority'
 import {twMerge} from 'tailwind-merge'
